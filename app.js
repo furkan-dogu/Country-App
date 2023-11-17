@@ -30,14 +30,14 @@ inputCountries.innerHTML = "";
     if (searchCountries.length == 1) {
       renderCountries(searchCountries[0]);
     } else {
-      searchCountries.forEach((item) => createElem(item.name.common));
+      searchCountries.forEach((item) => element(item.name.common));
     }
   }
 });
 
-function createElem(item) {
-  let searchElem = `<span class="list border border-2 rounded-2 p-1" role="button">${item}</span>`;
-  inputCountries.innerHTML += searchElem;
+function element(item) {
+  let ulke = `<span class="list p-1" role="button">${item}</span>`;
+  inputCountries.innerHTML += ulke;
 }
 
 inputCountries.addEventListener("click", (e) => {
@@ -51,23 +51,23 @@ inputCountries.addEventListener("click", (e) => {
   }
 });
 
-const renderCountries = (a) => {
+const renderCountries = (country) => {
     const countriesDiv = document.getElementById("countries-div")
-    const {flags, name, region, capital, languages, currencies, population, borders, maps} = a
+    const {flags, name, region, capital, languages, currencies, population, borders, maps} = country
     countriesDiv.innerHTML = `
     <div class="card w-100">
         <img src="${flags.png}" class="card-img-top" alt="...">
         <div class="card-body">
-            <h5 class="card-title text-center">${name.common}</h5>
+            <h5 class="card-title text-center fs-3">${name.common.toUpperCase()}</h5>
         </div>
         <ul class="list-group list-group-flush">
-            <li class="list-group-item"><span class="fw-bold">Region:</span> ${region}</li>
-            <li class="list-group-item"><span class="fw-bold">Capitals:</span> ${capital}</li>
-            <li class="list-group-item"><span class="fw-bold">Languages:</span> ${Object.values(languages)}</li>
-            <li class="list-group-item"><span class="fw-bold">Currencies:</span> ${Object.values(currencies)[0].name}</li>
-            <li class="list-group-item"><span class="fw-bold">Population:</span> ${population.toLocaleString("tr")}</li>
-            <li class="list-group-item"><span class="fw-bold">Borders:</span> ${borders}</li>
-            <li class="list-group-item"><span class="fw-bold">Map:</span> <a href="${maps.googleMaps}" target="_blank">Go to google map</a></li>
+            <li class="list-group-item"><span>Region:</span> ${region}</li>
+            <li class="list-group-item"><span>Capitals:</span> ${capital}</li>
+            <li class="list-group-item"><span>Languages:</span> ${Object.values(languages)}</li>
+            <li class="list-group-item"><span>Currencies:</span> ${Object.values(currencies)[0].name}, ${Object.values(currencies)[0].symbol}</li>
+            <li class="list-group-item"><span>Population:</span> ${population.toLocaleString("tr")}</li>
+            <li class="list-group-item"><span>Borders:</span> ${borders}</li>
+            <li class="list-group-item"><span>Map:</span> <a href="${maps.googleMaps}" target="_blank">Go to google map</a></li>
         </ul>
     </div>
     `

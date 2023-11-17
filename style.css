@@ -1,0 +1,46 @@
+body {
+    background-image: url(img.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: right;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.5) !important;
+}
+
+#input-countries {
+    height: 120px;
+    width: 50%;
+    overflow: auto;
+    color: whitesmoke;
+}
+
+#input-countries::-webkit-scrollbar{
+    overflow: hidden;
+}
+
+.card, li {
+    background-color: rgba(0, 0, 0, 0.3) !important;
+    color: whitesmoke !important;
+    font-weight: 500;
+}
+
+li span {
+    font-weight: 900;
+}
+
+h5 {
+    /* font-size: 2rem; */
+}
+
+a {
+    font-style: italic;
+    font-weight: bolder;
+    text-decoration: none;
+    padding: .2rem .4rem;
+    border-radius: 5px;
+    background-color: blue;
+    color: whitesmoke;
+}
