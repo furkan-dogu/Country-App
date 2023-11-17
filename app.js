@@ -61,13 +61,13 @@ const renderCountries = (country) => {
             <h5 class="card-title text-center fs-3">${name.common.toUpperCase()}</h5>
         </div>
         <ul class="list-group list-group-flush">
-            <li class="list-group-item"><span>Region:</span> ${region}</li>
-            <li class="list-group-item"><span>Capitals:</span> ${capital}</li>
-            <li class="list-group-item"><span>Languages:</span> ${Object.values(languages)}</li>
-            <li class="list-group-item"><span>Currencies:</span> ${Object.values(currencies)[0].name}, ${Object.values(currencies)[0].symbol}</li>
-            <li class="list-group-item"><span>Population:</span> ${population.toLocaleString("tr")}</li>
-            <li class="list-group-item"><span>Borders:</span> ${borders}</li>
-            <li class="list-group-item"><span>Map:</span> <a href="${maps.googleMaps}" target="_blank">Go to google map</a></li>
+            <li class="list-group-item"><i class="fa-solid fa-lg fa-earth-americas"></i> <span>Region:</span> ${region}</li>
+            <li class="list-group-item"><i class="fas fa-lg fa-landmark"></i> <span>Capitals:</span> ${capital}</li>
+            <li class="list-group-item"><i class="fas fa-lg fa-comments"></i> <span>Languages:</span> ${Object.values(languages)}</li>
+            <li class="list-group-item"><i class="fas fa-lg fa-money-bill-wave"></i> <span>Currencies:</span> ${Object.values(currencies)[0].name}, ${Object.values(currencies)[0].symbol}</li>
+            <li class="list-group-item"><i class="fa-solid fa-people-group"></i> <span>Population:</span> ${population.toLocaleString("tr")}</li>
+            <li class="list-group-item"><i class="fa-sharp fa-solid fa-road-barrier"></i> <span>Borders:</span> ${borders}</li>
+            <li class="list-group-item"><i class="fa-solid fa-map-location-dot"></i> <span>Map:</span> <a href="${maps.googleMaps}" target="_blank">Go to google map</a></li>
         </ul>
     </div>
     `
