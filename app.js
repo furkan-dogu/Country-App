@@ -11,7 +11,7 @@ const countriesData = async() => {
         }
         const data = await res.json()
         countries = data
-        renderCountries(data[232])
+        renderCountries(data[86])
     } catch (error) {
         console.log(error);
     }
