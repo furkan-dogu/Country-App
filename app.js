@@ -11,7 +11,8 @@ const countriesData = async() => {
         }
         const data = await res.json()
         countries = data
-        renderCountries(data[86])
+        const turkey = data.find(country => country.name.common === "Turkey")
+        renderCountries(turkey)
     } catch (error) {
         console.log(error);
     }
